@@ -4,14 +4,11 @@ import com.ewcode.securityitau.interfaces.IValidateDataService;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.logging.Logger;
 
 @Aspect
-@Component
 public class ValidateDataAspect {
 
     private static final String PREFFIX = "[VALIDATE-DATA-ASPECT] => ";
@@ -19,7 +16,6 @@ public class ValidateDataAspect {
 
     IValidateDataService validateDataService;
 
-    @Autowired
     public ValidateDataAspect(IValidateDataService validateDataService) {
         this.validateDataService = validateDataService;
     }
