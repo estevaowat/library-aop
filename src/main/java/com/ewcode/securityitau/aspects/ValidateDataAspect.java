@@ -26,7 +26,9 @@ public class ValidateDataAspect {
         String data = (String) joinPoint.getArgs()[0];
 
         List<String> errors = validateDataService.validateData(data);
-        logger.info("errors = " + errors.size());
+        String errorsSizeLog = "errors = " + errors.size();
+
+        logger.info(errorsSizeLog);
 
         if(errors.isEmpty()) {
             logger.info(PREFFIX + "Data validated");
