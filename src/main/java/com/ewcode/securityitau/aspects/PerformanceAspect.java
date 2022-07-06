@@ -24,6 +24,7 @@ public class PerformanceAspect {
         Instant end = Instant.now();
 
         long durationInMillis = Duration.between(start, end).toMillis();
+
         String durationLog = PREFFIX + "Duration of method is " + durationInMillis + "ms";
 
         logger.info(durationLog);
