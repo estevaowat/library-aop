@@ -1,14 +1,16 @@
-package com.ewcode.securityitau.aspects;
+package com.ewcode.libaspects.aspects;
 
-import com.ewcode.securityitau.interfaces.IValidateDataService;
+import com.ewcode.libaspects.interfaces.IValidateDataService;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.logging.Logger;
 
 @Aspect
+@Component
 public class ValidateDataAspect {
 
     private static final String PREFFIX = "[VALIDATE-DATA-ASPECT] => ";
@@ -20,7 +22,7 @@ public class ValidateDataAspect {
         this.validateDataService = validateDataService;
     }
 
-    @Around("@annotation(com.ewcode.securityitau.annotation.ValidateData)")
+    @Around("@annotation(com.ewcode.libaspects.annotation.ValidateData)")
     public Object validateData(ProceedingJoinPoint joinPoint) throws Throwable {
         logger.info(PREFFIX + "Starting validate data");
         String data = (String) joinPoint.getArgs()[0];
@@ -32,7 +34,7 @@ public class ValidateDataAspect {
 
         if(errors.isEmpty()) {
             logger.info(PREFFIX + "Data validated");
-            
+
 
             return joinPoint.proceed();
         }

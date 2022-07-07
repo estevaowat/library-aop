@@ -1,7 +1,7 @@
-package com.ewcode.securityitau.services;
+package com.ewcode.libaspects.services;
 
-import com.ewcode.securityitau.annotation.MeasureTime;
-import com.ewcode.securityitau.annotation.ValidateData;
+import com.ewcode.libaspects.annotation.MeasureTime;
+import com.ewcode.libaspects.annotation.ValidateData;
 
 import java.util.logging.Logger;
 

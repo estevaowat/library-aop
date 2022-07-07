@@ -1,4 +1,4 @@
-package com.ewcode.securityitau.interfaces;
+package com.ewcode.libaspects.interfaces;
 
 import java.util.List;
 

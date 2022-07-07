@@ -1,7 +1,7 @@
-package com.ewcode.securityitau;
+package com.ewcode.libaspects;
 
-import com.ewcode.securityitau.aspects.PerformanceAspect;
-import com.ewcode.securityitau.services.Service;
+import com.ewcode.libaspects.aspects.PerformanceAspect;
+import com.ewcode.libaspects.services.Service;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.aop.aspectj.annotation.AspectJProxyFactory;
