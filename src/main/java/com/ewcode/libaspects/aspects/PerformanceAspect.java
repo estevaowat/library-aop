@@ -1,4 +1,4 @@
-package com.ewcode.securityitau.aspects;
+package com.ewcode.libaspects.aspects;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -14,7 +14,7 @@ public class PerformanceAspect {
     private static final String PREFFIX = "[PERFORMANCE-ASPECT] => ";
     private static final Logger logger = Logger.getLogger(PerformanceAspect.class.getName());
 
-    @Around("@annotation(com.ewcode.securityitau.annotation.MeasureTime)")
+    @Around("@annotation(com.ewcode.libaspects.annotation.MeasureTime)")
     public Object measureTime(ProceedingJoinPoint joinPoint) throws Throwable {
         final String startLog = PREFFIX + "Starting measureTime";
         logger.info(startLog);
