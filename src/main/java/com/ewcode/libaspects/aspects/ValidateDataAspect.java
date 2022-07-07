@@ -4,13 +4,11 @@ import com.ewcode.libaspects.interfaces.IValidateDataService;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
-import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.logging.Logger;
 
 @Aspect
-@Component
 public class ValidateDataAspect {
 
     private static final String PREFFIX = "[VALIDATE-DATA-ASPECT] => ";
